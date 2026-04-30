@@ -1,45 +1,23 @@
-import styles from "@/styles/CTA.module.css";
-
 const CTA = () => {
   return (
-    <section
-      className={`${styles.section} ${styles.finalCta}`}
-      aria-labelledby="final-cta-heading"
-    >
-      <div className={styles.sectionContent}>
-        <div
-          className={styles.ctaCard}
-          role="region"
-          aria-label="Get Started Call to Action"
-        >
-          <h2 id="final-cta-heading">Ready to Get Started?</h2>
-          <p>
-            Experience the QS Pallets difference. Get a custom quote tailored to
-            your specific needs, or speak with our experts to find the perfect
-            solution.
-          </p>
-
-          <div
-            className={styles.ctaButtons}
-            role="group"
-            aria-label="Call to action buttons"
-          >
-            <a
-              className={`${styles.primaryCtaButton} mr-2`}
-              aria-label="Contact QS Pallets"
-              href={"mailto:qspallets@gmail.com"}
-            >
-              Email us
-            </a>
-            <a
-              className={styles.secondaryCtaButton}
-              aria-label="Contact QS Pallets"
-              href={"tel:+19034010536"}
-            >
-              Text us
-            </a>
-          </div>
-        </div>
+    <section id="contact" className="bg-[#a8d44b]  py-24 text-center">
+      <h2 className="font-serif text-6xl text-[#1a2e1a] tracking-tight leading-tight mb-4">
+        Ready for a<br />
+        <em className="not-italic">fresh cut?</em>
+      </h2>
+      <p className="text-[#1a2e1a]/60 font-light text-lg mb-10">
+        Drop your address and we'll get back to you within 24 hours with a free
+        quote.
+      </p>
+      <div className="flex gap-3 justify-center max-w-lg mx-auto px-4 flex-wrap">
+        <input
+          type="text"
+          placeholder="Your street address..."
+          className="flex-1 min-w-48 px-6 py-3 rounded-full bg-[#1a2e1a] text-[#f5f0e8] placeholder-[#f5f0e8]/30 text-sm font-light outline-none"
+        />
+        <button className="bg-[#1a2e1a] text-[#a8d44b] font-medium text-sm px-7 py-3 rounded-full transition-all duration-200 hover:bg-[#243824] whitespace-nowrap">
+          Get my free quote
+        </button>
       </div>
     </section>
   );

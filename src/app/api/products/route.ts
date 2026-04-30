@@ -2,7 +2,7 @@
 export const GET = () => {
   return new Response(
     JSON.stringify({
-      title: "Our Product Range",
+      title: "Our Services",
       description:
         "From standard shipping pallets to custom solutions, we have the right pallet for every application and budget.",
       products: [

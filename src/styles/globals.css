@@ -21,9 +21,11 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Lexend", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  background: #1a2e1a;
 }
 
 * {
@@ -43,4 +45,14 @@ a {
 
 @theme {
   --color-qsgreen: oklch(64.8% 0.2 131.684);
+  --animate-scroll: scroll 30s linear infinite;
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }

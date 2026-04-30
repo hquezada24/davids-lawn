@@ -1,10 +1,7 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useRef } from "react";
 import { usePathname } from "next/navigation";
-import "@/styles/Header.css";
-import Logo from "./Logo";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,153 +16,49 @@ const Header = () => {
     return location === path;
   };
   return (
-    <header className={`header `}>
-      <div className="container">
-        <div className="logo">
-          <Logo />
+    <header>
+      <nav className="sticky top-0 z-50 bg-[#1a2e1a] border-b border-white/10 flex items-center justify-between px-8 py-4">
+        <div className="font-serif text-2xl text-[#a8d44b] ">
+          Green<span className="italic text-[#f5f0e8]/60">Crew</span>
         </div>
-
-        {/* Desktop Navigation */}
-        <nav className="navigation" aria-label="Main navigation">
-          <ul className="navList" role="list">
-            <li className={`navItem ${isActiveLink("/") ? "activeLink" : ""}`}>
-              <Link href="/" className={`headerNavLink`}>
-                Home
-              </Link>
-            </li>
-            <li
-              className={`navItem ${
-                isActiveLink("/products") ? "activeLink" : ""
-              }`}
+        <ul className="hidden md:flex gap-8 list-none">
+          <li>
+            <Link
+              href="/services"
+              className="text-[#f5f0e8]/60 text-sm font-light tracking-wide hover:text-[#a8d44b] transition-colors"
             >
-              <Link href="/products" className={`headerNavLink`}>
-                Products
-              </Link>
-            </li>
-            <li
-              className={`navItem ${
-                isActiveLink("/request-a-quote") ? "activeLink" : ""
-              }`}
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/pricing"
+              className="text-[#f5f0e8]/60 text-sm font-light tracking-wide hover:text-[#a8d44b] transition-colors"
             >
-              <Link href="/request-a-quote" className={`headerNavLink`}>
-                Request a quote
-              </Link>
-            </li>
-            <li
-              className={`navItem ${
-                isActiveLink("/about") ? "activeLink" : ""
-              }`}
+              Pricing
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/team"
+              className="text-[#f5f0e8]/60 text-sm font-light tracking-wide hover:text-[#a8d44b] transition-colors"
             >
-              <Link href="/about" className={`headerNavLink`}>
-                About
-              </Link>
-            </li>
-            <li
-              className={`navItem ${
-                isActiveLink("/contact") ? "activeLink" : ""
-              }`}
+              Our Team
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/contact"
+              className="text-[#f5f0e8]/60 text-sm font-light tracking-wide hover:text-[#a8d44b] transition-colors"
             >
-              <Link href="/contact" className={`headerNavLink`}>
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* Mobile Menu Button */}
-        <div className="mobileMenu" ref={menuRef}>
-          <button
-            className="hamburger-button"
-            onClick={toggleMenu}
-            aria-expanded={isMenuOpen}
-            aria-controls="mobile-navigation"
-            aria-label={
-              isMenuOpen ? "Close navigation menu" : "Open navigation menu"
-            }
-          >
-            <span className="hamburger" aria-hidden="true">
-              <span className={`line ${isMenuOpen ? "lineActive" : ""}`}></span>
-              <span className={`line ${isMenuOpen ? "lineActive" : ""}`}></span>
-              <span className={`line ${isMenuOpen ? "lineActive" : ""}`}></span>
-            </span>
-          </button>
-
-          <nav
-            className={`mobileNav ${isMenuOpen ? "mobileNavOpen" : ""}`}
-            id="mobile-navigation"
-            aria-label="Mobile navigation"
-            aria-hidden={!isMenuOpen}
-          >
-            <ul className="mobileNavList" role="list">
-              <li
-                className={`mobileNavItem ${
-                  isActiveLink("/") ? "activeMobileLink" : ""
-                }`}
-              >
-                <Link
-                  href="/"
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`mobileNavLink`}
-                >
-                  Home
-                </Link>
-              </li>
-              <li
-                className={`mobileNavItem ${
-                  isActiveLink("/products") ? "activeMobileLink" : ""
-                }`}
-              >
-                <Link
-                  href="/products"
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`mobileNavLink`}
-                >
-                  Products
-                </Link>
-              </li>
-              <li
-                className={`mobileNavItem ${
-                  isActiveLink("/request-a-quote") ? "activeMobileLink" : ""
-                }`}
-              >
-                <Link
-                  href="/request-a-quote"
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`mobileNavLink`}
-                >
-                  Request a Quote
-                </Link>
-              </li>
-              <li
-                className={`mobileNavItem ${
-                  isActiveLink("/about") ? "activeMobileLink" : ""
-                }`}
-              >
-                <Link
-                  href="/about"
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`mobileNavLink`}
-                >
-                  About
-                </Link>
-              </li>
-              <li
-                className={`mobileNavItem ${
-                  isActiveLink("/contact") ? "activeMobileLink" : ""
-                }`}
-              >
-                <Link
-                  href="/contact"
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`mobileNavLink`}
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+              Contact
+            </Link>
+          </li>
+        </ul>
+        <button className="bg-[#a8d44b] text-[#1a2e1a] text-sm font-medium px-5 py-2 rounded-full transition-all duration-200 hover:bg-[#bce563]">
+          Get a Quote
+        </button>
+      </nav>
     </header>
   );
 };
