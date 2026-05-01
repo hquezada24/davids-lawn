@@ -10,7 +10,7 @@ import Team from "@/components/Team";
 
 export default function Home() {
   return (
-    <div className="bg-[#1a2e1as] text-[#f5f0e8] font-sans">
+    <div className="bg-[#1a2e1as] text-cream font-sans">
       {/* HERO */}
       <Hero />
 

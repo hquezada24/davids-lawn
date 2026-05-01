@@ -44,7 +44,15 @@ a {
 }
 
 @theme {
-  --color-qsgreen: oklch(64.8% 0.2 131.684);
+  --color-forest: #1a2e1a;
+  --color-forest-dark: #0f1c0f;
+  --color-forest-mid: #243824;
+  --color-lime: #a8d44b;
+  --color-lime-light: #bce563;
+  --color-cream: #f5f0e8;
+  --font-serif: "Playfair Display", "serif";
+  --font-sans: "DM Sans", "sans-serif";
+  --font-lexend: "Lexend", "serif";
   --animate-scroll: scroll 30s linear infinite;
 
   @keyframes scroll {
@@ -54,5 +62,67 @@ a {
     to {
       transform: translateX(-50%);
     }
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+}
+.fade-left {
+  opacity: 0;
+  transform: translateX(-32px);
+}
+.fade-right {
+  opacity: 0;
+  transform: translateX(32px);
+}
+.pill-in {
+  opacity: 0;
+  transform: scale(0.85);
+}
+
+.hero-line-inner {
+  display: block;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+/* Visible state — toggled by IntersectionObserver */
+.animate.visible {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Staggered delays */
+.delay-1 {
+  transition-delay: 0.1s;
+}
+.delay-2 {
+  transition-delay: 0.2s;
+}
+.delay-3 {
+  transition-delay: 0.3s;
+}
+.delay-4 {
+  transition-delay: 0.4s;
+}
+.delay-5 {
+  transition-delay: 0.5s;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .fade-up,
+  .fade-left,
+  .fade-right,
+  .pill-in,
+  .hero-line-inner {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

@@ -21,7 +21,7 @@ const Header = () => {
         <div className="font-serif text-2xl text-[#a8d44b] ">
           Green<span className="italic text-[#f5f0e8]/60">Crew</span>
         </div>
-        <ul className="hidden md:flex gap-8 list-none">
+        <ul className="hidden md:flex gap-8 list-none text-[#f5f0e8]/60">
           <li>
             <Link
               href="/services"
