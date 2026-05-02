@@ -17,7 +17,7 @@ const Services = () => {
             Clean, even cuts every time. We handle any yard size with precision.
           </p>
         </div>
-        <div className="transition-[transform, border-color] duration-200 hover:border-[rgba(168,212,75,0.5)] hover:-translate-y-1 bg-forest border border-lime/15 rounded-2xl p-7">
+        {/* <div className="transition-[transform, border-color] duration-200 hover:border-[rgba(168,212,75,0.5)] hover:-translate-y-1 bg-forest border border-lime/15 rounded-2xl p-7">
           <span className="text-3xl block mb-4">✂️</span>
           <h4 className="text-cream font-medium text-lg mb-2">
             Edging & Trimming
@@ -25,21 +25,21 @@ const Services = () => {
           <p className="text-cream/50 font-light text-sm leading-relaxed">
             Crisp borders along walkways, driveways, and garden beds.
           </p>
-        </div>
-        <div className="transition-[transform, border-color] duration-200 hover:border-[rgba(168,212,75,0.5)] hover:-translate-y-1 bg-forest border border-lime/15 rounded-2xl p-7">
+        </div> */}
+        {/* <div className="transition-[transform, border-color] duration-200 hover:border-[rgba(168,212,75,0.5)] hover:-translate-y-1 bg-forest border border-lime/15 rounded-2xl p-7">
           <span className="text-3xl block mb-4">🍂</span>
           <h4 className="text-cream font-medium text-lg mb-2">Leaf Cleanup</h4>
           <p className="text-cream/50 font-light text-sm leading-relaxed">
             Fall cleanups that leave your lawn clear and ready for the cold.
           </p>
-        </div>
-        <div className="transition-[transform, border-color] duration-200 hover:border-[rgba(168,212,75,0.5)] hover:-translate-y-1 bg-forest border border-lime/15 rounded-2xl p-7">
+        </div> */}
+        {/* <div className="transition-[transform, border-color] duration-200 hover:border-[rgba(168,212,75,0.5)] hover:-translate-y-1 bg-forest border border-lime/15 rounded-2xl p-7">
           <span className="text-3xl block mb-4">💧</span>
           <h4 className="text-cream font-medium text-lg mb-2">Fertilization</h4>
           <p className="text-cream/50 font-light text-sm leading-relaxed">
             Seasonal treatments to keep your grass thick, green, and healthy.
           </p>
-        </div>
+        </div> */}
         <div className="transition-[transform, border-color] duration-200 hover:border-[rgba(168,212,75,0.5)] hover:-translate-y-1 bg-forest border border-lime/15 rounded-2xl p-7">
           <span className="text-3xl block mb-4">🧹</span>
           <h4 className="text-cream font-medium text-lg mb-2">

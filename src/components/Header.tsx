@@ -17,15 +17,17 @@ const Header = () => {
   };
   return (
     <header>
-      <nav className="sticky top-0 z-50 bg-[#1a2e1a] border-b border-white/10 flex items-center justify-between px-8 py-4">
-        <div className="font-serif text-2xl text-[#a8d44b] ">
-          Green<span className="italic text-[#f5f0e8]/60">Crew</span>
+      <nav className="sticky top-0 z-50 bg-forest border-b border-white/10 flex items-center justify-between px-8 py-4">
+        <div className="font-serif text-2xl text-lime">
+          <Link href={"/"}>
+            Quezada<span className="italic text-cream/60">Lawn</span>
+          </Link>
         </div>
-        <ul className="hidden md:flex gap-8 list-none text-[#f5f0e8]/60">
+        <ul className="hidden md:flex gap-8 list-none text-cream/60">
           <li>
             <Link
               href="/services"
-              className="text-[#f5f0e8]/60 text-sm font-light tracking-wide hover:text-[#a8d44b] transition-colors"
+              className="text-cream/60 text-sm font-light tracking-wide hover:text-limetransition-colors"
             >
               Services
             </Link>
@@ -33,7 +35,7 @@ const Header = () => {
           <li>
             <Link
               href="/pricing"
-              className="text-[#f5f0e8]/60 text-sm font-light tracking-wide hover:text-[#a8d44b] transition-colors"
+              className="text-cream/60 text-sm font-light tracking-wide hover:text-limetransition-colors"
             >
               Pricing
             </Link>
@@ -41,7 +43,7 @@ const Header = () => {
           <li>
             <Link
               href="/team"
-              className="text-[#f5f0e8]/60 text-sm font-light tracking-wide hover:text-[#a8d44b] transition-colors"
+              className="text-cream/60 text-sm font-light tracking-wide hover:text-limetransition-colors"
             >
               Our Team
             </Link>
@@ -49,15 +51,15 @@ const Header = () => {
           <li>
             <Link
               href="/contact"
-              className="text-[#f5f0e8]/60 text-sm font-light tracking-wide hover:text-[#a8d44b] transition-colors"
+              className="text-cream/60 text-sm font-light tracking-wide hover:text-limetransition-colors"
             >
               Contact
             </Link>
           </li>
         </ul>
-        <button className="bg-[#a8d44b] text-[#1a2e1a] text-sm font-medium px-5 py-2 rounded-full transition-all duration-200 hover:bg-[#bce563]">
+        {/* <button className="bg-lime text-forest text-sm font-medium px-5 py-2 rounded-full transition-all duration-200 hover:bg-lime-light">
           Get a Quote
-        </button>
+        </button> */}
       </nav>
     </header>
   );

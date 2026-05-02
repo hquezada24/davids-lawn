@@ -1,9 +1,10 @@
 "use client";
-
+import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import { useScrollAnimationAll } from "@/hooks/useScrollAnimation";
 import { ImagePlaceholder } from "./ImagePlaceholder";
+import Button from "./Button";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -36,7 +37,7 @@ const services: ServiceRow[] = [
     description:
       "Consistent, clean cuts using commercial-grade mowers. We adapt to your yard's terrain, grass type, and your preferred height. No scalping, no missed strips — just a sharp, even finish every single time.",
     cta: "Book this service",
-    price: "from $35/visit",
+    price: "from $45/visit",
     imagePlaceholderLabel: "Photo: crew mowing a lawn",
     imageAlt: "Crew mowing a lawn",
     // imageSrc: '/images/services/mowing.jpg', // ← uncomment and set your path
@@ -44,7 +45,7 @@ const services: ServiceRow[] = [
       <div className="space-y-3 mb-8">
         {[
           { label: "Front & backyard coverage", width: 100 },
-          { label: "Clipping cleanup included", width: 100 },
+          // { label: "Clipping cleanup included", width: 100 },
           { label: "Scheduling flexibility", width: 95 },
         ].map(({ label, width }) => (
           <div key={label}>
@@ -64,109 +65,109 @@ const services: ServiceRow[] = [
       </div>
     ),
   },
-  {
-    id: "edging",
-    number: "Service 02",
-    title: "Edging &",
-    titleAccent: "Trimming",
-    description:
-      "The detail work that separates a good yard from a great one. We edge along driveways, sidewalks, and beds — leaving razor-clean lines that make the whole property look intentional.",
-    cta: "Book this service",
-    price: "included in Full Service",
-    imagePlaceholderLabel: "Photo: edging along walkway",
-    imageAlt: "Edging along walkway",
-    // imageSrc: '/images/services/edging.jpg',
-    detail: (
-      <div className="grid grid-cols-2 gap-3 mb-8">
-        {[
-          { title: "Driveways", sub: "Crisp edge, no overhang" },
-          { title: "Garden Beds", sub: "Clean separation every time" },
-          { title: "Sidewalks", sub: "Straight lines, both sides" },
-          { title: "Fences", sub: "Trimmed right to the base" },
-        ].map(({ title, sub }) => (
-          <div
-            key={title}
-            className="bg-forest-mid border border-lime/15 rounded-xl p-4"
-          >
-            <div className="text-lime text-xs font-medium uppercase tracking-wider mb-1">
-              {title}
-            </div>
-            <div className="text-cream/55 text-sm font-light">{sub}</div>
-          </div>
-        ))}
-      </div>
-    ),
-  },
-  {
-    id: "leaf-cleanup",
-    number: "Service 03",
-    title: "Leaf",
-    titleAccent: "Cleanup",
-    description:
-      "When fall hits, leaves pile up fast. We blow, rake, bag, and haul — leaving your lawn clear before the first frost. No half-job, no leftover piles by the curb.",
-    cta: "Book this service",
-    price: "seasonal add-on",
-    imagePlaceholderLabel: "Photo: leaf cleanup in progress",
-    imageAlt: "Leaf cleanup in progress",
-    // imageSrc: '/images/services/leaf-cleanup.jpg',
-    detail: (
-      <div className="flex flex-wrap gap-2 mb-8">
-        {[
-          "Blowing",
-          "Raking",
-          "Bagging",
-          "Haul-away",
-          "Gutter edge clear",
-          "Same-day service",
-        ].map((tag) => (
-          <span
-            key={tag}
-            className="bg-forest-mid border border-lime/20 text-cream/70 text-xs font-light px-3 py-1.5 rounded-full"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-    ),
-  },
-  {
-    id: "fertilization",
-    number: "Service 04",
-    title: "Lawn",
-    titleAccent: "Fertilization",
-    description:
-      "A green lawn doesn't happen by accident. Our seasonal treatments give your grass the nutrients it needs to stay thick, healthy, and resilient through heat, drought, and foot traffic.",
-    cta: "Book this service",
-    price: "seasonal plan available",
-    imagePlaceholderLabel: "Photo: fertilization treatment",
-    imageAlt: "Fertilization treatment",
-    // imageSrc: '/images/services/fertilization.jpg',
-    detail: (
-      <div className="flex flex-col gap-3 mb-8">
-        {[
-          {
-            title: "Spring starter treatment",
-            sub: "Wakes up grass after winter dormancy",
-          },
-          {
-            title: "Summer slow-release blend",
-            sub: "Heat-resistant formula for dry months",
-          },
-          { title: "Fall winterizer", sub: "Prepares roots for cold weather" },
-        ].map(({ title, sub }) => (
-          <div key={title} className="flex items-start gap-3">
-            <span className="mt-1 w-5 h-5 rounded-full bg-lime/15 flex items-center justify-center text-lime text-xs shrink-0">
-              ✓
-            </span>
-            <div>
-              <div className="text-cream text-sm font-medium">{title}</div>
-              <div className="text-cream/45 text-xs font-light">{sub}</div>
-            </div>
-          </div>
-        ))}
-      </div>
-    ),
-  },
+  // {
+  //   id: "edging",
+  //   number: "Service 02",
+  //   title: "Edging &",
+  //   titleAccent: "Trimming",
+  //   description:
+  //     "The detail work that separates a good yard from a great one. We edge along driveways, sidewalks, and beds — leaving razor-clean lines that make the whole property look intentional.",
+  //   cta: "Book this service",
+  //   price: "included in Full Service",
+  //   imagePlaceholderLabel: "Photo: edging along walkway",
+  //   imageAlt: "Edging along walkway",
+  //   // imageSrc: '/images/services/edging.jpg',
+  //   detail: (
+  //     <div className="grid grid-cols-2 gap-3 mb-8">
+  //       {[
+  //         { title: "Driveways", sub: "Crisp edge, no overhang" },
+  //         { title: "Garden Beds", sub: "Clean separation every time" },
+  //         { title: "Sidewalks", sub: "Straight lines, both sides" },
+  //         { title: "Fences", sub: "Trimmed right to the base" },
+  //       ].map(({ title, sub }) => (
+  //         <div
+  //           key={title}
+  //           className="bg-forest-mid border border-lime/15 rounded-xl p-4"
+  //         >
+  //           <div className="text-lime text-xs font-medium uppercase tracking-wider mb-1">
+  //             {title}
+  //           </div>
+  //           <div className="text-cream/55 text-sm font-light">{sub}</div>
+  //         </div>
+  //       ))}
+  //     </div>
+  //   ),
+  // },
+  // {
+  //   id: "leaf-cleanup",
+  //   number: "Service 02",
+  //   title: "Leaf",
+  //   titleAccent: "Cleanup",
+  //   description:
+  //     "When fall hits, leaves pile up fast. We blow, rake, bag, and haul — leaving your lawn clear before the first frost. No half-job, no leftover piles by the curb.",
+  //   cta: "Book this service",
+  //   price: "add-on, included in Full-Service",
+  //   imagePlaceholderLabel: "Photo: leaf cleanup in progress",
+  //   imageAlt: "Leaf cleanup in progress",
+  //   // imageSrc: '/images/services/leaf-cleanup.jpg',
+  //   detail: (
+  //     <div className="flex flex-wrap gap-2 mb-8">
+  //       {[
+  //         "Blowing",
+  //         "Raking",
+  //         "Bagging",
+  //         "Haul-away",
+  //         "Gutter edge clear",
+  //         "Same-day service",
+  //       ].map((tag) => (
+  //         <span
+  //           key={tag}
+  //           className="bg-forest-mid border border-lime/20 text-cream/70 text-xs font-light px-3 py-1.5 rounded-full"
+  //         >
+  //           {tag}
+  //         </span>
+  //       ))}
+  //     </div>
+  //   ),
+  // },
+  // {
+  //   id: "fertilization",
+  //   number: "Service 04",
+  //   title: "Lawn",
+  //   titleAccent: "Fertilization",
+  //   description:
+  //     "A green lawn doesn't happen by accident. Our seasonal treatments give your grass the nutrients it needs to stay thick, healthy, and resilient through heat, drought, and foot traffic.",
+  //   cta: "Book this service",
+  //   price: "seasonal plan available",
+  //   imagePlaceholderLabel: "Photo: fertilization treatment",
+  //   imageAlt: "Fertilization treatment",
+  //   // imageSrc: '/images/services/fertilization.jpg',
+  //   detail: (
+  //     <div className="flex flex-col gap-3 mb-8">
+  //       {[
+  //         {
+  //           title: "Spring starter treatment",
+  //           sub: "Wakes up grass after winter dormancy",
+  //         },
+  //         {
+  //           title: "Summer slow-release blend",
+  //           sub: "Heat-resistant formula for dry months",
+  //         },
+  //         { title: "Fall winterizer", sub: "Prepares roots for cold weather" },
+  //       ].map(({ title, sub }) => (
+  //         <div key={title} className="flex items-start gap-3">
+  //           <span className="mt-1 w-5 h-5 rounded-full bg-lime/15 flex items-center justify-center text-lime text-xs shrink-0">
+  //             ✓
+  //           </span>
+  //           <div>
+  //             <div className="text-cream text-sm font-medium">{title}</div>
+  //             <div className="text-cream/45 text-xs font-light">{sub}</div>
+  //           </div>
+  //         </div>
+  //       ))}
+  //     </div>
+  //   ),
+  // },
 ];
 
 const galleryItems = [
@@ -317,9 +318,15 @@ const ServicesPage = () => {
 
               {/* CTA */}
               <div className="flex items-center gap-3">
-                <button className="bg-lime text-forest text-sm font-medium px-6 py-2.5 rounded-full transition-all duration-200 hover:bg-lime-light hover:-translate-y-0.5">
-                  {service.cta}
-                </button>
+                {/* <div className="text-forest">
+                  <Link
+                    href={"/contact"}
+                    className="bg-lime  text-sm font-medium px-6 py-2.5 rounded-full transition-all duration-200 hover:bg-lime-light hover:-translate-y-0.5"
+                  >
+                    {service.cta}
+                  </Link>
+                </div> */}
+                <Button text={service.cta} />
                 <span className="text-cream/40 text-sm font-light">
                   {service.price}
                 </span>
@@ -383,18 +390,27 @@ const ServicesPage = () => {
 
       {/* ── CTA BAND ────────────────────────────────────────────── */}
       <section className="bg-lime py-20 text-center">
-        <h2 className="animate fade-up font-serif text-5xl text-forest tracking-tight leading-tight mb-4">
+        {/* <h2 className="animate fade-up font-serif text-5xl text-forest tracking-tight leading-tight mb-4">
           Not sure which service
           <br />
           you <em className="not-italic">need?</em>
+        </h2> */}
+        <h2 className="animate fade-up font-serif text-5xl text-forest tracking-tight leading-tight mb-4">
+          Ready to book
+          <br />a <em className="not-italic">visit?</em>
         </h2>
-        <p className="animate fade-up delay-1 text-forest/60 font-light text-base mb-8">
+        {/* <p className="animate fade-up delay-1 text-forest/60 font-light text-base mb-8">
           We&apos;ll come out for free and tell you exactly what your yard needs
           — no upsell, no pressure.
-        </p>
-        <button className="animate fade-up delay-2 bg-forest text-lime font-medium text-sm px-8 py-3 rounded-full transition-all duration-200 hover:bg-forest-mid hover:-translate-y-0.5">
-          Schedule a free walkthrough →
-        </button>
+        </p> */}
+        <div className="text-lime">
+          <Link
+            href={"/contact"}
+            className="animate fade-up delay-2 bg-forest text-lime font-medium text-sm px-8 py-3 rounded-full transition-all duration-200 hover:bg-forest-mid hover:-translate-y-0.5"
+          >
+            Book an appointment →
+          </Link>
+        </div>
       </section>
     </div>
   );

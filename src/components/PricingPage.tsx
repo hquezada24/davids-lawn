@@ -1,8 +1,7 @@
 "use client";
-
-import React from "react";
 import { useScrollAnimationAll } from "@/hooks/useScrollAnimation";
 import { ImagePlaceholder } from "./ImagePlaceholder";
+import Link from "next/link";
 
 // ---------------------------------------------------------------------------
 // Data
@@ -11,74 +10,98 @@ import { ImagePlaceholder } from "./ImagePlaceholder";
 const plans = [
   {
     badge: "Single Visit",
-    title: "Standard Cut",
-    price: "$48",
+    title: "Up to 1 acre",
+    price: "$45",
     meta: "per visit · up to 1 acre",
     cta: "Book Single Visit",
     featured: false,
     placeholder: "Photo: standard lawn mowing",
-    features: ["Lawn mowing", "Sidewalk blowing", "Front & backyard"],
+    features: [
+      "Mowing",
+      "Trimming around trees & fences",
+      // "Sidewalk blowing",
+      "Debris removal (on request)",
+      //"Priority scheduling",
+    ],
   },
   {
     badge: "Most Popular",
-    title: "Full Service",
-    price: "$78",
+    title: "Up to 2 acres",
+    price: "$75",
     meta: "per visit · up to 2 acres",
     cta: "Book Full Service",
-    featured: true,
+    featured: false,
     placeholder: "Photo: full service yard work",
     features: [
-      "Mowing + edging",
+      "Mowing",
       "Trimming around trees & fences",
-      "Sidewalk blowing",
-      "Debris removal",
+      // "Sidewalk blowing",
+      "Debris removal (on request)",
       "Priority scheduling",
+      "15% discount",
     ],
   },
   {
-    badge: "Monthly",
-    title: "Monthly Basic",
-    price: "$165",
-    meta: "per month · 4 visits",
-    cta: "Subscribe to Basic Monthly",
+    badge: "Most Popular",
+    title: "Up to 3 acres",
+    price: "$115",
+    meta: "per visit · up to 3 acres",
+    cta: "Book Full Service",
     featured: false,
-    placeholder: "Photo: residential lawn maintenance",
+    placeholder: "Photo: full service yard work",
     features: [
-      "Mowing + blowing each visit",
-      "4 visits per month",
-      "Approx. 15% savings",
+      "Mowing",
+      "Trimming around trees & fences",
+      // "Sidewalk blowing",
+      "Debris removal (on request)",
+      "Priority scheduling",
+      "15% discount",
     ],
   },
-  {
-    badge: "Monthly",
-    title: "Full Monthly",
-    price: "$255",
-    meta: "per month · 4 visits",
-    cta: "Subscribe to Full Monthly",
-    featured: false,
-    placeholder: "Photo: premium lawn care",
-    features: [
-      "Everything in Full Service",
-      "4 visits per month",
-      "High priority scheduling",
-      "Approx. 18% savings",
-    ],
-  },
-  {
-    badge: "For Businesses",
-    title: "Commercial Plan",
-    price: "$295",
-    meta: "per month · 4 visits",
-    cta: "Subscribe to Commercial Plan",
-    featured: false,
-    placeholder: "Photo: commercial landscaping",
-    features: [
-      "Professional Full Service",
-      "4 visits per month",
-      "Priority attention",
-      "Perfect for offices & stores",
-    ],
-  },
+  // {
+  //   badge: "Monthly",
+  //   title: "Monthly Basic",
+  //   price: "$165",
+  //   meta: "per month · 4 visits",
+  //   cta: "Subscribe to Basic Monthly",
+  //   featured: false,
+  //   placeholder: "Photo: residential lawn maintenance",
+  //   features: [
+  //     "Mowing + blowing each visit",
+  //     "4 visits per month",
+  //     "Approx. 15% savings",
+  //   ],
+  // },
+  // {
+  //   badge: "Monthly",
+  //   title: "Full Monthly",
+  //   price: "$255",
+  //   meta: "per month · 4 visits",
+  //   cta: "Subscribe to Full Monthly",
+  //   featured: false,
+  //   placeholder: "Photo: premium lawn care",
+  //   features: [
+  //     "Everything in Full Service",
+  //     "4 visits per month",
+  //     "High priority scheduling",
+  //     "Approx. 18% savings",
+  //   ],
+  // },
+  // {
+  //   badge: "For Businesses",
+  //   title: "Commercial Plan",
+  //   price: "$295",
+  //   meta: "per month · 4 visits",
+  //   cta: "Subscribe to Commercial Plan",
+  //   featured: false,
+  //   placeholder: "Photo: commercial landscaping",
+  //   features: [
+  //     "Professional Full Service",
+  //     "4 visits per month",
+  //     "Priority attention",
+  //     "Perfect for offices & stores",
+  //   ],
+  // },
 ];
 
 // ---------------------------------------------------------------------------
@@ -135,7 +158,7 @@ const PricingPage = () => {
               </div>
 
               {/* Badge */}
-              <span
+              {/* <span
                 className={`inline-block text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full mb-4 ${
                   plan.featured
                     ? "bg-forest/20 text-forest"
@@ -143,7 +166,7 @@ const PricingPage = () => {
                 }`}
               >
                 {plan.badge}
-              </span>
+              </span> */}
 
               {/* Title */}
               <h3
@@ -212,14 +235,19 @@ const PricingPage = () => {
       {/* ── CTA ───────────────────────────────────────────── */}
       <section className="bg-lime py-20 text-center">
         <h2 className="animate fade-up font-serif text-5xl text-forest mb-4">
-          Not sure what to choose?
+          Ready to book an appointment?
         </h2>
-        <p className="animate fade-up delay-1 text-forest/60 mb-8">
+        {/* <p className="animate fade-up delay-1 text-forest/60 mb-8">
           We’ll guide you to the right plan — no pressure.
-        </p>
-        <button className="animate fade-up delay-2 bg-forest text-lime px-8 py-3 rounded-full hover:bg-forest-mid transition">
-          Get a recommendation →
-        </button>
+        </p> */}
+        <div className="text-lime mt-10">
+          <Link
+            href={"/contact"}
+            className="animate fade-up delay-2 bg-forest text-lime px-8 py-3 rounded-full hover:bg-forest-mid transition"
+          >
+            Get a recommendation →
+          </Link>
+        </div>
       </section>
     </div>
   );

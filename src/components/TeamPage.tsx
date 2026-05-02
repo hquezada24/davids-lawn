@@ -9,14 +9,14 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 const team = [
   {
     name: "David Quezada",
-    role: "Founder & Crew Lead",
+    role: "Founder & Crew Member",
     bio: "Built the company from the ground up. Obsessed with clean lines, consistency, and doing the job right the first time.",
     tag: "10+ years experience",
     placeholder: "Photo: crew leader portrait",
   },
   {
     name: "Hugo Quezada",
-    role: "Field Specialist",
+    role: "Founder & Crew Member",
     bio: "Precision-focused. Handles edging, trimming, and detail work that makes a yard stand out.",
     tag: "Detail expert",
     placeholder: "Photo: trimming specialist",
@@ -139,7 +139,7 @@ const TeamPage = () => {
           A crew that actually <span className="text-lime">shows up.</span>
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-4">
+        {/* <div className="grid md:grid-cols-3 gap-4">
           {["On-site work", "Equipment prep", "Before/after results"].map(
             (label, i) => (
               <div key={label} className={`animate fade-up delay-${i + 1}`}>
@@ -150,7 +150,7 @@ const TeamPage = () => {
               </div>
             ),
           )}
-        </div>
+        </div> */}
       </section>
 
       {/* ── VALUES ───────────────────────────────────────── */}
