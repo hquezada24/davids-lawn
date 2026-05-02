@@ -1,6 +1,4 @@
 export const dynamic = "force-dynamic";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import Hero from "@/components/Hero";
 import CTA from "@/components/CTA";
 import MarqueeStrip from "@/components/MarqueeStrip";

@@ -1,8 +1,8 @@
-import { Metadata } from "next";
-import PricingPage from "@/components/PricingPage";
+import type { Metadata } from "next";
+import TeamPage from "@/components/TeamPage";
 
 export const metadata: Metadata = {
-  title: "Pricing | GreenCrew",
+  title: "Team | GreenCrew",
   description:
     "From lawn mowing and edging to leaf cleanup and fertilization — explore everything GreenCrew offers to keep your yard looking its best.",
   openGraph: {
@@ -12,8 +12,6 @@ export const metadata: Metadata = {
   },
 };
 
-const page = () => {
-  return <PricingPage />;
-};
-
-export default page;
+export default function Page() {
+  return <TeamPage />;
+}

@@ -1,7 +1,7 @@
 const MarqueeStrip = () => {
   return (
-    <div className="bg-[#a8d44b] py-4 overflow-hidden">
-      <div className="flex gap-8 animate-scroll w-max text-[#1a2e1a] text-sm font-medium">
+    <div className="bg-lime py-4 overflow-hidden">
+      <div className="flex gap-8 animate-scroll w-max text-forest text-sm font-medium">
         <span className="whitespace-nowrap">✦ Lawn Mowing</span>
         <span className="opacity-40">•</span>
         <span className="whitespace-nowrap">✦ Edging & Trimming</span>
