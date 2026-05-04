@@ -1,20 +1,58 @@
 "use client";
+import styles from "@/styles/Button.module.css";
 import Link from "next/link";
 
-const Button = ({ text, link = "", variant = "light" }) => {
-  const styling =
-    variant === "light"
-      ? ["text-cream", "bg-lime"]
-      : ["text-lime", "bg-forest"];
+const Button = ({
+  text,
+  link = "",
+  type = "button",
+  variant = "primary",
+  size = "medium",
+  disabled = false,
+  loading = false,
+  ariaLabel,
+  className = "",
+  ...props
+}) => {
+  const buttonClass = [
+    styles.btn,
+    styles[variant],
+    styles[size],
+    disabled && styles.disabled,
+    loading && styles.loading,
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  const handleClick = (e) => {
+    if (disabled || loading) {
+      e.preventDefault();
+      return;
+    }
+  };
+
   return (
-    <div className={`${styling[0]}`}>
-      <Link
-        href={link}
-        className={`${styling[1]} text-sm font-medium px-6 py-2.5 rounded-full transition-all duration-200 hover:bg-[#28a428] hover:-translate-y-0.5`}
-      >
-        {text}
-      </Link>
-    </div>
+    <button
+      className={buttonClass}
+      type={type}
+      disabled={disabled || loading}
+      onClick={handleClick}
+      aria-label={ariaLabel || text}
+      {...props}
+    >
+      {loading && <span className={styles.spinner} aria-hidden="true" />}
+      {link ? (
+        <Link
+          href={link}
+          className={`btnLink ${loading ? styles.textHidden : ""}`}
+        >
+          {text}
+        </Link>
+      ) : (
+        <span className={loading ? styles.textHidden : ""}>{text}</span>
+      )}
+    </button>
   );
 };
 

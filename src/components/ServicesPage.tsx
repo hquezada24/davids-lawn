@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { useScrollAnimationAll } from "@/hooks/useScrollAnimation";
 import { ImagePlaceholder } from "./ImagePlaceholder";
-import Button from "./Button";
+import LawnButton from "./LawnButton";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -326,7 +326,7 @@ const ServicesPage = () => {
                     {service.cta}
                   </Link>
                 </div> */}
-                <Button text={service.cta} />
+                <LawnButton text={service.cta} />
                 <span className="text-cream/40 text-lg font-light">
                   {service.price}
                 </span>
