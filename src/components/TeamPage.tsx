@@ -1,6 +1,7 @@
 "use client";
 import { useScrollAnimationAll } from "@/hooks/useScrollAnimation";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import Link from "next/link";
 
 // ---------------------------------------------------------------------------
 // Data
@@ -72,7 +73,7 @@ const TeamPage = () => {
       <section className="relative max-w-6xl mx-auto px-8 pt-20 pb-16 overflow-hidden">
         <div className="pointer-events-none absolute top-0 right-0 w-96 h-96 rounded-full bg-lime/5 translate-x-32 -translate-y-20" />
 
-        <div className="animate pill-in inline-flex items-center gap-2 bg-lime/10 border border-lime/20 text-lime text-xs font-medium tracking-widest uppercase px-4 py-2 rounded-full mb-8">
+        <div className="animate pill-in inline-flex items-center gap-2 bg-lime/10 border border-lime/20 text-cream text-xs font-medium tracking-widest uppercase px-4 py-2 rounded-full mb-8">
           Our Team
         </div>
 
@@ -111,7 +112,7 @@ const TeamPage = () => {
               </div>
 
               {/* Tag */}
-              <div className="text-lime text-xs uppercase tracking-wider mb-2">
+              <div className="text-lime text-sm uppercase tracking-wider mb-2">
                 {member.tag}
               </div>
 
@@ -119,10 +120,10 @@ const TeamPage = () => {
               <h3 className="font-serif text-xl text-cream">{member.name}</h3>
 
               {/* Role */}
-              <div className="text-cream/50 text-sm mb-3">{member.role}</div>
+              <div className="text-cream/50 text-lg mb-3">{member.role}</div>
 
               {/* Bio */}
-              <p className="text-cream/60 text-sm font-light leading-relaxed">
+              <p className="text-cream/60 text-lg font-light leading-relaxed">
                 {member.bio}
               </p>
             </div>
@@ -154,7 +155,7 @@ const TeamPage = () => {
       </section>
 
       {/* ── VALUES ───────────────────────────────────────── */}
-      <section className="bg-forest-mid py-20">
+      <section className=" py-20">
         <div className="max-w-6xl mx-auto px-8">
           <h2 className="animate fade-up font-serif text-4xl mb-12">
             What we stand for
@@ -164,12 +165,12 @@ const TeamPage = () => {
             {values.map((value, i) => (
               <div
                 key={value.title}
-                className={`animate fade-up delay-${(i % 5) + 1} border border-lime/15 rounded-2xl p-6`}
+                className={`animate fade-up delay-${(i % 5) + 1} border-2 border-lime rounded-2xl p-6`}
               >
-                <div className="text-lime text-sm uppercase tracking-wider mb-2">
+                <div className="text-cream text-lg uppercase tracking-wider mb-2">
                   {value.title}
                 </div>
-                <p className="text-cream/60 text-sm font-light leading-relaxed">
+                <p className="text-cream/60 text-lg font-light leading-relaxed">
                   {value.desc}
                 </p>
               </div>
@@ -179,20 +180,23 @@ const TeamPage = () => {
       </section>
 
       {/* ── CTA ─────────────────────────────────────────── */}
-      <section className="bg-lime py-20 text-center">
-        <h2 className="animate fade-up font-serif text-5xl text-forest mb-4">
+      <section className=" py-20 text-center">
+        <h2 className="animate fade-up font-serif text-5xl text-cream mb-4">
           Ready to work with a team
           <br />
           that actually cares?
         </h2>
 
-        <p className="animate fade-up delay-1 text-forest/60 mb-8">
+        <p className="animate fade-up delay-1 text-cream/70 mb-8">
           We show up, do it right, and leave your yard better every time.
         </p>
 
-        <button className="animate fade-up delay-2 bg-forest text-lime px-8 py-3 rounded-full hover:bg-forest-mid transition">
+        <Link
+          href={"/contact"}
+          className="animate fade-up delay-2 bg-lime text-cream px-8 py-3 rounded-full hover:bg-[#28a428] transition"
+        >
           Book your first service →
-        </button>
+        </Link>
       </section>
     </div>
   );

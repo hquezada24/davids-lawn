@@ -2,12 +2,12 @@ import Link from "next/link";
 
 const CTA = () => {
   return (
-    <section id="contact" className="bg-lime  py-24 text-center">
-      <h2 className="font-serif text-6xl text-forest tracking-tight leading-tight mb-4">
+    <section id="contact" className="py-24 text-center">
+      <h2 className="font-serif text-6xl text-cream tracking-tight leading-tight mb-4">
         Ready for a<br />
         <em className="not-italic">fresh cut?</em>
       </h2>
-      {/* <p className="text-[#1a2e1a]/60 font-light text-lg mb-10">
+      {/* <p className="text-forest/60 font-light text-lg mb-10">
         Drop your address and we'll get back to you within 24 hours with a free
         quote.
       </p> */}
@@ -15,14 +15,14 @@ const CTA = () => {
         {/* <input
           type="text"
           placeholder="Your street address..."
-          className="flex-1 min-w-48 px-6 py-3 rounded-full bg-[#1a2e1a] text-[#f5f0e8] placeholder-[#f5f0e8]/30 text-sm font-light outline-none"
+          className="flex-1 min-w-48 px-6 py-3 rounded-full bg-forest text-cream placeholder-cream/30 text-lg font-light outline-none"
         /> */}
-        <div className="text-lime">
+        <div className="mt-10">
           <Link
             href={"/contact"}
-            className="bg-forest  font-medium text-sm px-7 py-3 rounded-full transition-all duration-200 hover:bg-forest-mid whitespace-nowrap"
+            className="bg-lime text-cream font-medium text-lg px-7 py-3 rounded-full btn-transition hover:bg-[#28a428] whitespace-nowrap"
           >
-            Book your appointment
+            Book an appointment
           </Link>
         </div>
       </div>

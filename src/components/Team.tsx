@@ -3,16 +3,16 @@ const Team = () => {
     <section id="team" className="max-w-6xl mx-auto px-8 py-24">
       <div className="grid md:grid-cols-2 gap-12 items-end mb-12">
         <div>
-          <div className="text-lime text-xs font-medium tracking-widest uppercase mb-3">
+          {/* <div className="text-cream text-xs font-medium tracking-widest uppercase mb-3">
             Meet the crew
-          </div>
+          </div> */}
           <h2 className="font-serif text-5xl text-cream tracking-tight leading-tight">
             Real neighbors.
             <br />
             <em className="text-lime not-italic">Real work.</em>
           </h2>
         </div>
-        <p className="text-cream/60 font-light text-lg leading-relaxed">
+        <p className="text-cream font-light text-lg leading-relaxed">
           We're a group of folks from the same community who wanted to build
           something together. No big corporate boss — just a team that shows up
           and does right by every customer.

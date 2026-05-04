@@ -8,7 +8,7 @@ import Team from "@/components/Team";
 
 export default function Home() {
   return (
-    <div className="bg-[#1a2e1as] text-cream font-sans">
+    <div className="bg-forest text-cream font-sans">
       {/* HERO */}
       <Hero />
 

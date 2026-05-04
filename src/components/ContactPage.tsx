@@ -28,7 +28,7 @@ const ContactPage = () => {
       <section className="relative max-w-6xl mx-auto px-8 pt-20 pb-16 overflow-hidden">
         <div className="pointer-events-none absolute top-0 right-0 w-96 h-96 rounded-full bg-lime/5 translate-x-32 -translate-y-20" />
 
-        <div className="animate pill-in inline-flex items-center gap-2 bg-lime/10 border border-lime/20 text-lime text-xs font-medium tracking-widest uppercase px-4 py-2 rounded-full mb-8">
+        <div className="animate pill-in inline-flex items-center gap-2 bg-lime/10 border border-lime/20 text-cream text-xs font-medium tracking-widest uppercase px-4 py-2 rounded-full mb-8">
           Contact
         </div>
 
@@ -53,7 +53,7 @@ const ContactPage = () => {
         {/* LEFT: CONTACT OPTIONS */}
         <div className="animate fade-right space-y-8">
           {/* Phone */}
-          <div className="bg-forest-mid border border-lime/15 rounded-2xl p-6">
+          <div className="border-2 border-lime rounded-2xl p-6">
             <div className="text-lime text-xs uppercase tracking-widest mb-2">
               Call or Text
             </div>
@@ -62,14 +62,14 @@ const ContactPage = () => {
             </div>
             <a
               href={`tel:${contact.phone}`}
-              className="inline-block bg-lime text-forest text-sm font-medium px-6 py-2.5 rounded-full hover:bg-lime-light transition"
+              className="inline-block bg-lime text-cream text-sm font-medium px-6 py-2.5 rounded-full hover:bg-[#28a428] transition"
             >
               Call now →
             </a>
           </div>
 
           {/* Email */}
-          <div className="bg-forest-mid border border-lime/15 rounded-2xl p-6">
+          <div className="border-2 border-lime rounded-2xl p-6">
             <div className="text-lime text-xs uppercase tracking-widest mb-2">
               Email
             </div>
@@ -85,7 +85,7 @@ const ContactPage = () => {
           </div>
 
           {/* Social */}
-          {/* <div className="bg-forest-mid border border-lime/15 rounded-2xl p-6">
+          {/* <div className="border-2 border-lime rounded-2xl p-6">
             <div className="text-lime text-xs uppercase tracking-widest mb-2">
               Social
             </div>
@@ -137,12 +137,12 @@ const ContactPage = () => {
       </section>
 
       {/* ── CTA ─────────────────────────────────────────── */}
-      <section className="bg-lime py-20 text-center">
-        <h2 className="animate fade-up font-serif text-5xl text-forest mb-4">
+      <section className="border-2 border-lime py-20 text-center">
+        <h2 className="animate fade-up font-serif text-5xl text-cream mb-4">
           Want a fast quote?
         </h2>
 
-        <p className="animate fade-up delay-1 text-forest/60 mb-8">
+        <p className="animate fade-up delay-1 text-cream/60 mb-8">
           Send us a message or call — we’ll give you a clear price right away.
         </p>
 

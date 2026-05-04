@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header>
       <nav className="sticky top-0 z-50 bg-forest border-b border-white/10 flex items-center justify-between px-8 py-4">
-        <div className="font-serif text-2xl text-lime">
+        <div className="font-serif text-2xl text-lime font-bold">
           <Link href={"/"}>
             Quezada<span className="italic text-cream/60">Lawn</span>
           </Link>

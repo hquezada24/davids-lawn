@@ -49,7 +49,7 @@ const services: ServiceRow[] = [
           { label: "Scheduling flexibility", width: 95 },
         ].map(({ label, width }) => (
           <div key={label}>
-            <div className="flex justify-between text-sm text-cream/60 font-light mb-1">
+            <div className="flex justify-between text-lg text-cream/60 font-light mb-1">
               <span>{label}</span>
               <span className="text-lime">{width}%</span>
             </div>
@@ -92,7 +92,7 @@ const services: ServiceRow[] = [
   //           <div className="text-lime text-xs font-medium uppercase tracking-wider mb-1">
   //             {title}
   //           </div>
-  //           <div className="text-cream/55 text-sm font-light">{sub}</div>
+  //           <div className="text-cream/55 text-lg font-light">{sub}</div>
   //         </div>
   //       ))}
   //     </div>
@@ -160,7 +160,7 @@ const services: ServiceRow[] = [
   //             ✓
   //           </span>
   //           <div>
-  //             <div className="text-cream text-sm font-medium">{title}</div>
+  //             <div className="text-cream text-lg font-medium">{title}</div>
   //             <div className="text-cream/45 text-xs font-light">{sub}</div>
   //           </div>
   //         </div>
@@ -235,7 +235,7 @@ const ServicesPage = () => {
         <div className="pointer-events-none absolute top-0 right-0 w-96 h-96 rounded-full bg-lime/5 translate-x-32 -translate-y-20" />
 
         {/* Badge */}
-        <div className="animate pill-in inline-flex items-center gap-2 bg-lime/10 border border-lime/20 text-lime text-xs font-medium tracking-widest uppercase px-4 py-2 rounded-full mb-8">
+        <div className="animate pill-in inline-flex items-center gap-2 bg-lime/10 border border-lime/20 text-cream text-xs font-medium tracking-widest uppercase px-4 py-2 rounded-full mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-lime inline-block" />
           What we offer
         </div>
@@ -305,7 +305,7 @@ const ServicesPage = () => {
               <h2 className="font-serif text-5xl text-cream leading-tight tracking-tight mb-4">
                 {service.title}
                 <br />
-                <em className="not-italic text-lime">{service.titleAccent}</em>
+                <em className="not-italic text-cream">{service.titleAccent}</em>
               </h2>
 
               {/* Description */}
@@ -321,13 +321,13 @@ const ServicesPage = () => {
                 {/* <div className="text-forest">
                   <Link
                     href={"/contact"}
-                    className="bg-lime  text-sm font-medium px-6 py-2.5 rounded-full transition-all duration-200 hover:bg-lime-light hover:-translate-y-0.5"
+                    className="bg-lime  text-lg font-medium px-6 py-2.5 rounded-full transition-all duration-200 hover:bg-lime-light hover:-translate-y-0.5"
                   >
                     {service.cta}
                   </Link>
                 </div> */}
                 <Button text={service.cta} />
-                <span className="text-cream/40 text-sm font-light">
+                <span className="text-cream/40 text-lg font-light">
                   {service.price}
                 </span>
               </div>
@@ -389,13 +389,13 @@ const ServicesPage = () => {
       </section>
 
       {/* ── CTA BAND ────────────────────────────────────────────── */}
-      <section className="bg-lime py-20 text-center">
+      <section className="bg-forest py-20 text-center">
         {/* <h2 className="animate fade-up font-serif text-5xl text-forest tracking-tight leading-tight mb-4">
           Not sure which service
           <br />
           you <em className="not-italic">need?</em>
         </h2> */}
-        <h2 className="animate fade-up font-serif text-5xl text-forest tracking-tight leading-tight mb-4">
+        <h2 className="animate fade-up font-serif text-5xl text-cream tracking-tight leading-tight mb-4">
           Ready to book
           <br />a <em className="not-italic">visit?</em>
         </h2>
@@ -403,10 +403,10 @@ const ServicesPage = () => {
           We&apos;ll come out for free and tell you exactly what your yard needs
           — no upsell, no pressure.
         </p> */}
-        <div className="text-lime">
+        <div className="text-cream">
           <Link
             href={"/contact"}
-            className="animate fade-up delay-2 bg-forest text-lime font-medium text-sm px-8 py-3 rounded-full transition-all duration-200 hover:bg-forest-mid hover:-translate-y-0.5"
+            className="animate fade-up delay-2 bg-lime  font-medium text-lg px-8 py-3 rounded-full transition-all duration-200 hover:bg-[#28a428] hover:-translate-y-0.5"
           >
             Book an appointment →
           </Link>
