@@ -596,8 +596,6 @@ const QuoteForm = () => {
                 <Button
                   text={isSubmitting ? "Submitting..." : "Submit Quote Request"}
                   type="submit"
-                  variant="primary"
-                  size="large"
                   loading={isSubmitting}
                   disabled={isSubmitting}
                   ariaLabel="Submit quote request form"
@@ -686,8 +684,6 @@ const QuoteForm = () => {
               <div className={styles.helpActions}>
                 <Button
                   text="Call Us"
-                  variant="outline"
-                  onClick={() => (window.location.href = "tel:+14695551234")}
                   ariaLabel="Call QS Pallets for assistance"
                 />
               </div>

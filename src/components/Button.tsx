@@ -1,30 +1,25 @@
 "use client";
-import styles from "@/styles/Button.module.css";
 import Link from "next/link";
+
+type ButtonProps = {
+  text: string;
+  link?: string;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+  loading?: boolean;
+  ariaLabel?: string;
+  props?: Record<string, any>;
+};
 
 const Button = ({
   text,
   link = "",
   type = "button",
-  variant = "primary",
-  size = "medium",
   disabled = false,
   loading = false,
   ariaLabel,
-  className = "",
   ...props
-}) => {
-  const buttonClass = [
-    styles.btn,
-    styles[variant],
-    styles[size],
-    disabled && styles.disabled,
-    loading && styles.loading,
-    className,
-  ]
-    .filter(Boolean)
-    .join(" ");
-
+}: ButtonProps) => {
   const handleClick = (e) => {
     if (disabled || loading) {
       e.preventDefault();
@@ -34,24 +29,14 @@ const Button = ({
 
   return (
     <button
-      className={buttonClass}
       type={type}
       disabled={disabled || loading}
       onClick={handleClick}
       aria-label={ariaLabel || text}
       {...props}
     >
-      {loading && <span className={styles.spinner} aria-hidden="true" />}
-      {link ? (
-        <Link
-          href={link}
-          className={`btnLink ${loading ? styles.textHidden : ""}`}
-        >
-          {text}
-        </Link>
-      ) : (
-        <span className={loading ? styles.textHidden : ""}>{text}</span>
-      )}
+      {loading && <span aria-hidden="true" />}
+      {link ? <Link href={link}>{text}</Link> : <span>{text}</span>}
     </button>
   );
 };
