@@ -70,8 +70,8 @@ const Pricing = () => {
             </h3>
 
             <div className="font-serif text-6xl font-bold text-[#1a1a1a] leading-none mb-1">
-              {plans === "maintenance" && "$55"}
-              {plans === "obstacles" && "$85"}
+              {plans === "maintenance" && "$65"}
+              {plans === "obstacles" && "$100"}
             </div>
 
             <div className="text-[#5c6b5c] text-lg mb-6">per visit</div>
@@ -109,8 +109,8 @@ const Pricing = () => {
             </h3>
 
             <div className="font-serif text-6xl font-bold text-[#1a1a1a] leading-none mb-1">
-              {plans === "maintenance" && "$90"}
-              {plans === "obstacles" && "$145"}
+              {plans === "maintenance" && "$120"}
+              {plans === "obstacles" && "$184"}
             </div>
 
             <div className="text-[#5c6b5c] text-lg mb-6">per visit</div>
@@ -121,7 +121,7 @@ const Pricing = () => {
                 "Trimming around trees & fences",
                 "Debris removal (on request)",
                 "Priority scheduling",
-                "15% discount",
+                "8% discount",
               ].map((item) => (
                 <li
                   key={item}
@@ -150,8 +150,8 @@ const Pricing = () => {
             </h3>
 
             <div className="font-serif text-6xl font-bold text-[#1a1a1a] leading-none mb-1">
-              {plans === "maintenance" && "$150"}
-              {plans === "obstacles" && "$247"}
+              {plans === "maintenance" && "$200"}
+              {plans === "obstacles" && "$300"}
             </div>
 
             <div className="text-[#5c6b5c] text-lg mb-6">per visit</div>
@@ -162,7 +162,7 @@ const Pricing = () => {
                 "Trimming around trees & fences",
                 "Debris removal (on request)",
                 "Priority scheduling",
-                "15% discount",
+                "17% discount",
               ].map((item) => (
                 <li
                   key={item}

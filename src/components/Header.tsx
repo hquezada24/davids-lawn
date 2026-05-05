@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState, useRef } from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,11 +19,19 @@ const Header = () => {
   return (
     <header>
       <nav className="sticky top-0 z-50 bg-forest border-b border-white/10 flex items-center justify-between px-8 py-4">
-        <div className="font-serif text-2xl text-lime font-bold">
+        {/* <div className="font-serif text-2xl text-lime font-bold">
           <Link href={"/"}>
             Quezada<span className="italic text-cream/60">Lawn</span>
           </Link>
-        </div>
+        </div> */}
+        <Link href={"/"}>
+          <Image
+            src={"/logo.png"}
+            width={120}
+            height={120}
+            alt="Quezada Lawn Care Logo"
+          ></Image>
+        </Link>
         <ul className="hidden md:flex gap-8 list-none text-cream/60">
           <li>
             <Link
