@@ -14,7 +14,7 @@ const Services = () => {
       </h2>
 
       {/* Gallery Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Image Card */}
         <div className="group relative overflow-hidden rounded-2xl border-2 border-lime bg-forest">
           <Image
