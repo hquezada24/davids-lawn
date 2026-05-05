@@ -366,7 +366,7 @@ const ServicesPage = () => {
       </section>
 
       {/* ── GALLERY ─────────────────────────────────────────────── */}
-      <section className="max-w-6xl mx-auto px-8 pb-24">
+      {/* <section className="max-w-6xl mx-auto px-8 pb-24">
         <div className="animate fade-up text-lime text-xs font-medium tracking-widest uppercase mb-3">
           Our work
         </div>
@@ -376,7 +376,6 @@ const ServicesPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {galleryItems.map(({ label, caption, placeholderLabel }, i) => (
             <div key={label} className={`animate fade-up delay-${i + 1}`}>
-              {/* Swap ImagePlaceholder with <Image> when you have real photos */}
               <ImagePlaceholder
                 label={placeholderLabel}
                 hint={label}
@@ -386,7 +385,7 @@ const ServicesPage = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* ── CTA BAND ────────────────────────────────────────────── */}
       <section className="bg-forest py-20 text-center">

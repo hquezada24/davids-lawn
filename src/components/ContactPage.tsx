@@ -114,7 +114,7 @@ const ContactPage = () => {
 
         {/* RIGHT: VISUAL / TRUST */}
         <div className="animate fade-left space-y-6">
-          <ImagePlaceholder
+          {/* <ImagePlaceholder
             label="Photo: team on-site helping customer"
             height="h-[260px]"
           />
@@ -122,7 +122,7 @@ const ContactPage = () => {
           <ImagePlaceholder
             label="Photo: completed lawn result"
             height="h-[160px]"
-          />
+          /> */}
 
           <div className="bg-lime/10 border border-lime/20 rounded-2xl p-6">
             <div className="text-lime text-sm uppercase tracking-wider mb-2">
