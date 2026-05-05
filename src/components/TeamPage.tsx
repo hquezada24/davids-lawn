@@ -12,7 +12,7 @@ const team = [
     name: "David Quezada",
     role: "Founder & Crew Member",
     bio: "Built the company from the ground up. Obsessed with clean lines, consistency, and doing the job right the first time.",
-    tag: "10+ years experience",
+    tag: "1+ year experience",
     placeholder: "Photo: crew leader portrait",
   },
   {
