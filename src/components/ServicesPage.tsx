@@ -17,7 +17,7 @@ interface ServiceRow {
   titleAccent: string;
   description: string;
   cta: string;
-  price: string;
+  price?: string;
   imageSrc?: string;
   imageAlt: string;
   imagePlaceholderLabel: string;
@@ -37,7 +37,6 @@ const services: ServiceRow[] = [
     description:
       "Consistent, clean cuts using commercial-grade mowers. We adapt to your yard's terrain, grass type, and your preferred height. No scalping, no missed strips — just a sharp, even finish every single time.",
     cta: "Book this service",
-    price: "from $45/visit",
     imagePlaceholderLabel: "Photo: crew mowing a lawn",
     imageAlt: "Crew mowing a lawn",
     // imageSrc: '/images/services/mowing.jpg', // ← uncomment and set your path
@@ -279,15 +278,14 @@ const ServicesPage = () => {
       </section>
 
       {/* ── HERO IMAGE ──────────────────────────────────────────── */}
-      <div className="animate fade-up max-w-6xl mx-auto px-8 pb-20">
-        {/* Replace ImagePlaceholder with a real Next.js Image when ready */}
+      {/* <div className="animate fade-up max-w-6xl mx-auto px-8 pb-20">
         <ImagePlaceholder
           label="Your best team photo goes here"
           hint="Recommended: 1400 × 600px, landscape"
           height="h-[400px]"
           className="rounded-3xl"
         />
-      </div>
+      </div> */}
 
       {/* ── SERVICE ROWS ────────────────────────────────────────── */}
       <section className="max-w-6xl mx-auto px-8 pb-24 flex flex-col gap-28">
@@ -334,32 +332,22 @@ const ServicesPage = () => {
             </div>
           );
 
-          const imageBlock = (
-            <div className={`animate ${isEven ? "fade-left" : "fade-right"}`}>
-              <ServiceImage
-                src={service.imageSrc}
-                alt={service.imageAlt}
-                placeholderLabel={service.imagePlaceholderLabel}
-              />
-            </div>
-          );
+          // const imageBlock = (
+          //   <div className={`animate ${isEven ? "fade-left" : "fade-right"}`}>
+          //     <ServiceImage
+          //       src={service.imageSrc}
+          //       alt={service.imageAlt}
+          //       placeholderLabel={service.imagePlaceholderLabel}
+          //     />
+          //   </div>
+          // );
 
           return (
             <div
               key={service.id}
               className="grid md:grid-cols-2 gap-12 items-center"
             >
-              {isEven ? (
-                <>
-                  {imageBlock}
-                  {textBlock}
-                </>
-              ) : (
-                <>
-                  {textBlock}
-                  {imageBlock}
-                </>
-              )}
+              {isEven ? <>{textBlock}</> : <>{textBlock}</>}
             </div>
           );
         })}

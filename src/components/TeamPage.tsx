@@ -18,7 +18,7 @@ const team = [
   {
     name: "Hugo Quezada",
     role: "Founder & Crew Member",
-    bio: "Precision-focused. Handles edging, trimming, and detail work that makes a yard stand out.",
+    bio: "Precision-focused. Handles trimming, and detail work that makes a yard stand out.",
     tag: "Detail expert",
     placeholder: "Photo: trimming specialist",
   },
@@ -103,13 +103,13 @@ const TeamPage = () => {
               className={`animate fade-up delay-${(i % 5) + 1}`}
             >
               {/* Image */}
-              <div className="mb-5">
+              {/* <div className="mb-5">
                 <ImagePlaceholder
                   label={member.placeholder}
                   height="h-[260px]"
                   className="rounded-2xl"
                 />
-              </div>
+              </div> */}
 
               {/* Tag */}
               <div className="text-lime text-sm uppercase tracking-wider mb-2">
