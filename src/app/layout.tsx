@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 
 export const metadata = {
-  title: "QS Pallets",
+  title: "Quezada Lawn",
 };
 
 export default function RootLayout({
