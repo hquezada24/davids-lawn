@@ -1,5 +1,5 @@
 "use client";
-import Form from "@/components/Form";
+import Form from "@/components/dashboard/Form";
 import Table, { Column } from "@/components/dashboard/Table";
 import { useState, useEffect } from "react";
 import { User } from "@/types/user";
