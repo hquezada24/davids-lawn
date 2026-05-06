@@ -1,10 +1,10 @@
 export const dynamic = "force-dynamic";
-import Hero from "@/components/Hero";
-import CTA from "@/components/CTA";
-import MarqueeStrip from "@/components/MarqueeStrip";
-import Services from "@/components/Services";
-import Pricing from "@/components/Pricing";
-import Team from "@/components/Team";
+import Hero from "@/components/main/Hero";
+import CTA from "@/components/main/CTA";
+import MarqueeStrip from "@/components/main/MarqueeStrip";
+import Services from "@/components/main/Services";
+import Pricing from "@/components/main/Pricing";
+import Team from "@/components/main/Team";
 
 export default function Home() {
   return (

@@ -2,11 +2,11 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { IQuote } from "@/types/quote";
-import QuoteSkeleton from "@/components/QuoteSkeleton";
-import StatusDropdown from "@/components/StatusDropdown";
+import QuoteSkeleton from "@/components/dashboard/QuoteSkeleton";
+import StatusDropdown from "@/components/dashboard/StatusDropdown";
 import { apiRequest } from "@/lib/apiRequest";
 import { useParams } from "next/navigation";
-import Table from "@/components/Table";
+import Table from "@/components/dashboard/Table";
 
 interface QuoteData extends IQuote {
   _id: string;

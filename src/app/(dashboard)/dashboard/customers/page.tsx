@@ -1,5 +1,5 @@
 "use client";
-import Table, { Column } from "@/components/Table";
+import Table, { Column } from "@/components/dashboard/Table";
 import { useState, useEffect } from "react";
 import { apiRequest } from "@/lib/apiRequest";
 import { Customer } from "@/types/customer";

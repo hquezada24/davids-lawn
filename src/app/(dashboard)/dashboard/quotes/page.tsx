@@ -1,11 +1,11 @@
 "use client";
-import Table, { Column } from "@/components/Table";
+import Table, { Column } from "@/components/dashboard/Table";
 import { MdArrowRightAlt } from "react-icons/md";
 import { useState, useEffect } from "react";
 import { apiRequest } from "@/lib/apiRequest";
 import { Quote } from "@/types/quote";
 import Link from "next/link";
-import TableSkeleton from "@/components/TableSkeleton";
+import TableSkeleton from "@/components/dashboard/TableSkeleton";
 
 type QuotesResponse = {
   quotes: Quote[];

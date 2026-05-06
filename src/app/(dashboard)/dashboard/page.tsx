@@ -1,6 +1,6 @@
-import DashboardNav from "@/components/DashboardNav";
-import DashboardHomeGraph from "@/components/DashboardHomeGraph";
-import SalesSummaryCard from "@/components/SalesSummaryCard";
+import DashboardNav from "@/components/dashboard/DashboardNav";
+import DashboardHomeGraph from "@/components/dashboard/DashboardHomeGraph";
+import SalesSummaryCard from "@/components/dashboard/SalesSummaryCard";
 import connectDB from "@/config/database";
 import Order from "@/models/Order";
 import { IOrder } from "@/types/order";

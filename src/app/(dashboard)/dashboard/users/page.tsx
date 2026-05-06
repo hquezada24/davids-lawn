@@ -1,6 +1,6 @@
 "use client";
 import Form from "@/components/Form";
-import Table, { Column } from "@/components/Table";
+import Table, { Column } from "@/components/dashboard/Table";
 import { useState, useEffect } from "react";
 import { User } from "@/types/user";
 import { useSession } from "next-auth/react";

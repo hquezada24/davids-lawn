@@ -1,11 +1,11 @@
 "use client";
-import Table, { Column } from "@/components/Table";
-import Form from "@/components/Form";
+import Table, { Column } from "@/components/dashboard/Table";
+import Form from "@/components/dashboard/Form";
 import { useState, useEffect } from "react";
 import { Product } from "@/types/product";
 import { useApiQuery } from "@/hooks/useApiQuery";
-import TableSkeleton from "@/components/TableSkeleton";
-import StockModal from "@/components/StockModal";
+import TableSkeleton from "@/components/dashboard/TableSkeleton";
+import StockModal from "@/components/dashboard/StockModal";
 
 type ProductsResponse = {
   products: Product[];

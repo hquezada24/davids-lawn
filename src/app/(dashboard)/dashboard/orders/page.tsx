@@ -1,14 +1,14 @@
 "use client";
 import Link from "next/link";
 import { MdArrowRightAlt } from "react-icons/md";
-import Table, { Column } from "@/components/Table";
+import Table, { Column } from "@/components/dashboard/Table";
 import { useState, useEffect } from "react";
 import { apiRequest } from "@/lib/apiRequest";
 import { Order } from "@/types/order";
-import TableSkeleton from "@/components/TableSkeleton";
-import StatusDropdown from "@/components/StatusDropdown";
-import Form from "@/components/Form";
-import SearchCustomer from "@/components/SearchCustomer";
+import TableSkeleton from "@/components/dashboard/TableSkeleton";
+import StatusDropdown from "@/components/dashboard/StatusDropdown";
+import Form from "@/components/dashboard/Form";
+import SearchCustomer from "@/components/dashboard/SearchCustomer";
 
 type OrdersResponse = {
   orders: Order[];

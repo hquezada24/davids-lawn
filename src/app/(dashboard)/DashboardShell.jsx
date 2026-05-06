@@ -1,6 +1,6 @@
 "use client";
-import SidebarMenu from "@/components/SidebarMenu";
-import DashboardHeader from "@/components/DashboardHeader";
+import SidebarMenu from "@/components/dashboard/SidebarMenu";
+import DashboardHeader from "@/components/dashboard/DashboardHeader";
 import { useState } from "react";
 
 const DashboardShell = ({ children }) => {

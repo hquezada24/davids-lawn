@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TeamPage from "@/components/TeamPage";
+import TeamPage from "@/components/main/TeamPage";
 
 export const metadata: Metadata = {
   title: "Team | GreenCrew",
