@@ -22,7 +22,7 @@ export function ImagePlaceholder({
       `}
     >
       {/* Subtle inner glow on hover */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-lime/[0.03] to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-lime/3 to-transparent" />
 
       {/* Camera icon */}
       <svg

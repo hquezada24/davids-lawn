@@ -1,8 +1,7 @@
 "use client";
 import { useScrollAnimationAll } from "@/hooks/useScrollAnimation";
-import { ImagePlaceholder } from "./ImagePlaceholder";
-import { useState } from "react";
 import Link from "next/link";
+import LawnPricing from "./LawnPrices";
 
 // ---------------------------------------------------------------------------
 // Data
@@ -110,7 +109,6 @@ const plans = [
 // ---------------------------------------------------------------------------
 
 const PricingPage = () => {
-  const [plans, setPlans] = useState("maintenance");
   const pageRef = useScrollAnimationAll(".animate", { threshold: 0.12 });
 
   return (
@@ -142,85 +140,6 @@ const PricingPage = () => {
         </p>
       </section>
 
-      {/* ── PRICING GRID ───────────────────────────────────── */}
-      {/* <section className="max-w-6xl mx-auto px-8 pb-24">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {plans.map((plan, i) => (
-            <div
-              key={plan.title}
-              className={`animate fade-up delay-${(i % 5) + 1} rounded-2xl p-6 flex flex-col justify-between text-cream ${
-                plan.featured
-                  ? "bg-[#f7fbf6] lg:scale-105"
-                  : "bg-forest border border-lime/20"
-              }`}
-            >
-              <div>
-                
-                <div className="mb-6">
-                  <ImagePlaceholder
-                    label={plan.placeholder}
-                    height="h-[160px]"
-                  />
-                </div>
-
-               
-                <span
-                className={`inline-block text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full mb-4 ${
-                  plan.featured
-                    ? "bg-forest/20 text-forest"
-                    : "bg-lime/10 text-lime"
-                }`}
-              >
-                {plan.badge}
-              </span> 
-
-              
-                <h3 className={`font-serif text-2xl mb-2 text-[#1a1a1a]`}>
-                  {plan.title}
-                </h3>
-
-               
-                <div
-                  className={`font-serif text-6xl font-bold text-[#1a1a1a] leading-none mb-1`}
-                >
-                  {plan.price}
-                </div>
-
-                <div className={`text-lg font-light mb-6 text-[#5c6b5c]`}>
-                  {plan.meta}
-                </div>
-
-              
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className={`flex items-center gap-3 text-lg font-light text-[#5c6b5c]`}
-                    >
-                      <span
-                        className={`w-5 h-5 rounded-full bg-[#32cd32] flex items-center justify-center text-black text-lg`}
-                      >
-                        ✓
-                      </span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-
-              
-                <Link
-                  href="/contact"
-                  className={`block w-full py-3 rounded-full text-center font-semibold ${plan.featured ? "bg-[#32cd32] hover:bg-[#28a428]" : "border-2 border-[#32cd32] hover:bg-lime"} text-black transition`}
-                >
-                  Book appointment
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section> */}
       <section id="pricing" className="bg-forest py-24">
         <div className="max-w-6xl mx-auto px-8">
           <div className="text-lime text-xs font-medium tracking-widest uppercase mb-3">
@@ -231,175 +150,8 @@ const PricingPage = () => {
             <br />
             Just <em className="text-lime not-italic">good rates.</em>
           </h2>
-          <div className="mb-10">
-            <div className="w-full flex flex-col items-center mx-auto">
-              <label
-                htmlFor="lawn-status"
-                className="block text-lg font-medium text-[#1a1a1a] mb-2"
-              >
-                Lawn condition
-              </label>
 
-              <div className="relative">
-                <select
-                  name="lawn-status"
-                  id="lawn-status"
-                  value={plans}
-                  onChange={(e) => setPlans(e.target.value)}
-                  className="w-full appearance-none rounded-xl border border-[#d9e5d6] bg-[#f7fbf6] px-4 py-3 pr-10 text-[#1a1a1a] text-base font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-[#32cd32] focus:border-[#32cd32] transition"
-                >
-                  <option value="maintenance">Regular Maintenance</option>
-                  <option value="obstacles">
-                    Heavy Obstacles / Uneven Terrain / Overgrown
-                  </option>
-                </select>
-
-                {/* Custom arrow */}
-                <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-[#5c6b5c]">
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* 1. Single Visit - Basic */}
-
-            {/* Card 1 */}
-            <div className="bg-[#f7fbf6] border-2 border-[#32cd32] rounded-2xl p-8 shadow-xl scale-105 relative">
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#32cd32] text-black text-xs font-semibold px-3 py-1 rounded-full">
-                MOST POPULAR
-              </span>
-              <h3 className="font-serif text-2xl text-[#1a1a1a] mb-2">
-                Up to 1/2 acre (21780 ft²)
-              </h3>
-
-              <div className="font-serif text-6xl font-bold text-[#1a1a1a] leading-none mb-1">
-                {plans === "maintenance" && "$65"}
-                {plans === "obstacles" && "$100"}
-              </div>
-
-              <div className="text-[#5c6b5c] text-lg mb-6">per visit</div>
-
-              <ul className="space-y-3 mb-8">
-                {[
-                  "Lawn mowing",
-                  "Trimming around trees & fences",
-                  "Debris removal (on request)",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-3 text-[#1a1a1a]"
-                  >
-                    <span className="w-5 h-5 rounded-full bg-[#32cd32] flex items-center justify-center text-black text-lg">
-                      ✓
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <Link
-                href="/contact"
-                className="block w-full py-3 rounded-full text-center font-semibold bg-[#32cd32] text-black hover:bg-[#28a428] transition"
-              >
-                Book appointment
-              </Link>
-            </div>
-
-            {/* Featured Card */}
-            <div className="border-2 border-[#32cd32]  rounded-2xl p-8 bg-forest">
-              <h3 className="font-serif text-2xl text-[#1a1a1a] mb-2">
-                Up to 1 acre
-              </h3>
-
-              <div className="font-serif text-6xl font-bold text-[#1a1a1a] leading-none mb-1">
-                {plans === "maintenance" && "$120"}
-                {plans === "obstacles" && "$184"}
-              </div>
-
-              <div className="text-[#5c6b5c] text-lg mb-6">per visit</div>
-
-              <ul className="space-y-3 mb-8">
-                {[
-                  "Lawn mowing",
-                  "Trimming around trees & fences",
-                  "Debris removal (on request)",
-                  "Priority scheduling",
-                  "15% discount",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-3 text-[#1a1a1a]"
-                  >
-                    <span className="w-5 h-5 rounded-full bg-[#32cd32] flex items-center justify-center text-black text-lg">
-                      ✓
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <Link
-                href="/contact"
-                className="block w-full py-3 rounded-full text-center font-semibold border-2 border-[#32cd32] text-[#32cd32] hover:bg-[#32cd32] hover:text-black transition"
-              >
-                Book appointment
-              </Link>
-            </div>
-
-            {/* Card 3 */}
-            <div className="border-2 border-[#32cd32] rounded-2xl p-8 bg-forest">
-              <h3 className="font-serif text-2xl text-[#1a1a1a] mb-2">
-                Up to 2 acres
-              </h3>
-
-              <div className="font-serif text-6xl font-bold text-[#1a1a1a] leading-none mb-1">
-                {plans === "maintenance" && "$200"}
-                {plans === "obstacles" && "$300"}
-              </div>
-
-              <div className="text-[#5c6b5c] text-lg mb-6">per visit</div>
-
-              <ul className="space-y-3 mb-8">
-                {[
-                  "Lawn mowing",
-                  "Trimming around trees & fences",
-                  "Debris removal (on request)",
-                  "Priority scheduling",
-                  "15% discount",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-3 text-[#1a1a1a]"
-                  >
-                    <span className="w-5 h-5 rounded-full bg-[#32cd32] flex items-center justify-center text-black text-lg">
-                      ✓
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <Link
-                href="/contact"
-                className="block w-full py-3 rounded-full text-center font-semibold border-2 border-[#32cd32] text-[#32cd32] hover:bg-[#32cd32] hover:text-black transition"
-              >
-                Book appointment
-              </Link>
-            </div>
-          </div>
+          <LawnPricing />
         </div>
       </section>
 

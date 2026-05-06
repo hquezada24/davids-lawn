@@ -3,7 +3,7 @@ import Hero from "@/components/main/Hero";
 import CTA from "@/components/main/CTA";
 import MarqueeStrip from "@/components/main/MarqueeStrip";
 import Services from "@/components/main/Services";
-import Pricing from "@/components/main/Pricing";
+import LawnPricing from "@/components/main/LawnPrices";
 import Team from "@/components/main/Team";
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
       <Services />
 
       {/* PRICING */}
-      <Pricing />
+      <LawnPricing />
 
       {/* TEAM */}
       <Team />
