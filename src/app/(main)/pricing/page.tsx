@@ -1,15 +1,8 @@
 import { Metadata } from "next";
-import PricingPage from "@/components/PricingPage";
+import PricingPage from "@/components/main/PricingPage";
 
 export const metadata: Metadata = {
-  title: "Pricing | GreenCrew",
-  description:
-    "From lawn mowing and edging to leaf cleanup and fertilization — explore everything GreenCrew offers to keep your yard looking its best.",
-  openGraph: {
-    title: "Services | GreenCrew",
-    description: "Professional lawn care services from your neighborhood crew.",
-    // images: [{ url: '/og/services.jpg' }], // ← add your OG image
-  },
+  title: "Pricing | Quezada Lawn Care",
 };
 
 const page = () => {
