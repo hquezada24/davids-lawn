@@ -58,20 +58,18 @@ const Pricing = () => {
           </div>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* 1. Single Visit - Basic */}
-
           {/* Card 1 */}
           <div className="bg-[#f7fbf6] border-2 border-[#32cd32] rounded-2xl p-8 shadow-xl scale-105 relative">
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#32cd32] text-black text-xs font-semibold px-3 py-1 rounded-full">
               MOST POPULAR
             </span>
             <h3 className="font-serif text-2xl text-[#1a1a1a] mb-2">
-              Up to 1/2 acre (21780 ft²)
+              1/4 acre (~11,000 ft²)
             </h3>
 
             <div className="font-serif text-6xl font-bold text-[#1a1a1a] leading-none mb-1">
-              {plans === "maintenance" && "$65"}
-              {plans === "obstacles" && "$100"}
+              {plans === "maintenance" && "$45"}
+              {plans === "obstacles" && "$70"}
             </div>
 
             <div className="text-[#5c6b5c] text-lg mb-6">per visit</div>
@@ -102,15 +100,62 @@ const Pricing = () => {
             </Link>
           </div>
 
-          {/* Featured Card */}
-          <div className="border-2 border-[#32cd32]  rounded-2xl p-8 bg-forest">
+          {/* Card 2 */}
+          <div className="bg-[#f7fbf6] border-2 border-[#32cd32] rounded-2xl p-8 shadow-xl scale-105 relative">
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#32cd32] text-black text-xs font-semibold px-3 py-1 rounded-full">
+              MOST POPULAR
+            </span>
             <h3 className="font-serif text-2xl text-[#1a1a1a] mb-2">
-              Up to 1 acre
+              1/2 acre (21780 ft²)
             </h3>
 
             <div className="font-serif text-6xl font-bold text-[#1a1a1a] leading-none mb-1">
-              {plans === "maintenance" && "$120"}
-              {plans === "obstacles" && "$184"}
+              {plans === "maintenance" && "$80"}
+              {plans === "obstacles" && "$125"}
+            </div>
+
+            <div className="text-[#5c6b5c] text-lg mb-6">per visit</div>
+
+            <ul className="space-y-3 mb-8">
+              {[
+                "Lawn mowing",
+                "Trimming around trees & fences",
+                "Debris removal (on request)",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex items-center gap-3 text-[#1a1a1a]"
+                >
+                  <span className="w-5 h-5 rounded-full bg-[#32cd32] flex items-center justify-center text-black text-lg">
+                    ✓
+                  </span>
+                  {item}
+                </li>
+              ))}
+              <li className="flex items-center gap-3 text-[#1a1a1a]">
+                <span className="w-5 h-5 rounded-full bg-[#32cd32] flex items-center justify-center text-black text-lg">
+                  ✓
+                </span>
+                {plans === "maintenance" && "12% discount"}
+                {plans === "obstacles" && "11% discount"}
+              </li>
+            </ul>
+
+            <Link
+              href="/contact"
+              className="block w-full py-3 rounded-full text-center font-semibold bg-[#32cd32] text-black hover:bg-[#28a428] transition"
+            >
+              Book appointment
+            </Link>
+          </div>
+
+          {/* Featured Card */}
+          <div className="border-2 border-[#32cd32]  rounded-2xl p-8 bg-forest">
+            <h3 className="font-serif text-2xl text-[#1a1a1a] mb-2">1 acre</h3>
+
+            <div className="font-serif text-6xl font-bold text-[#1a1a1a] leading-none mb-1">
+              {plans === "maintenance" && "$160"}
+              {plans === "obstacles" && "$250"}
             </div>
 
             <div className="text-[#5c6b5c] text-lg mb-6">per visit</div>
@@ -133,6 +178,13 @@ const Pricing = () => {
                   {item}
                 </li>
               ))}
+              <li className="flex items-center gap-3 text-[#1a1a1a]">
+                <span className="w-5 h-5 rounded-full bg-[#32cd32] flex items-center justify-center text-black text-lg">
+                  ✓
+                </span>
+                {plans === "maintenance" && "12% discount"}
+                {plans === "obstacles" && "11% discount"}
+              </li>
             </ul>
 
             <Link
@@ -150,8 +202,8 @@ const Pricing = () => {
             </h3>
 
             <div className="font-serif text-6xl font-bold text-[#1a1a1a] leading-none mb-1">
-              {plans === "maintenance" && "$200"}
-              {plans === "obstacles" && "$300"}
+              {plans === "maintenance" && "$320"}
+              {plans === "obstacles" && "$500"}
             </div>
 
             <div className="text-[#5c6b5c] text-lg mb-6">per visit</div>
@@ -162,7 +214,6 @@ const Pricing = () => {
                 "Trimming around trees & fences",
                 "Debris removal (on request)",
                 "Priority scheduling",
-                "17% discount",
               ].map((item) => (
                 <li
                   key={item}
@@ -174,6 +225,13 @@ const Pricing = () => {
                   {item}
                 </li>
               ))}
+              <li className="flex items-center gap-3 text-[#1a1a1a]">
+                <span className="w-5 h-5 rounded-full bg-[#32cd32] flex items-center justify-center text-black text-lg">
+                  ✓
+                </span>
+                {plans === "maintenance" && "12% discount"}
+                {plans === "obstacles" && "11% discount"}
+              </li>
             </ul>
 
             <Link
